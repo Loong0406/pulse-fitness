@@ -1,0 +1,11 @@
+.git
+.gradle
+.runtime
+.tools
+.idea
+**/build
+app
+deliverables
+docs/screenshots
+local.properties
+.env

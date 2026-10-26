@@ -1,0 +1,36 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/auth_connection_help"
+            android:textColor="@color/auth_on_surface" />
+        <EditText
+            android:id="@+id/login_endpoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:hint="@string/auth_endpoint_hint"
+            android:textColor="@color/auth_on_surface"
+            android:textColorHint="@color/auth_secondary" />
+        <EditText
+            android:id="@+id/login_gateway_token"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="@string/auth_gateway_token_hint"
+            android:textColor="@color/auth_on_surface"
+            android:textColorHint="@color/auth_secondary" />
+    </LinearLayout>
+</ScrollView>

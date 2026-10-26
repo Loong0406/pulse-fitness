@@ -1,0 +1,15 @@
+<resources>
+    <color name="auth_hero">@color/hero_start</color>
+    <color name="auth_on_hero">@color/ink</color>
+    <color name="auth_hero_secondary">@color/secondary</color>
+    <color name="auth_surface">@color/canvas</color>
+    <color name="auth_field">@color/surface</color>
+    <color name="auth_on_surface">@color/ink</color>
+    <color name="auth_secondary">@color/muted</color>
+    <color name="auth_outline">@color/outline</color>
+    <color name="auth_action">@color/accent</color>
+    <color name="auth_code_surface">@color/accent_container</color>
+    <color name="auth_error">@color/error</color>
+    <color name="auth_primary">@color/primary</color>
+    <color name="auth_on_primary">@color/on_primary</color>
+</resources>

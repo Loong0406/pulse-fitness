@@ -1,0 +1,22 @@
+# Optional Java gateway only. No model is downloaded or started.
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8080
+      APP_TOKEN: ${APP_TOKEN:?Set a random APP_TOKEN of at least 24 characters in .env}
+      AI_BASE_URL: ${AI_BASE_URL:-}
+      AI_MODEL: ${AI_MODEL:-configured-model}
+      AI_API_KEY: ${AI_API_KEY:-}
+      DB_URL: ${DB_URL:-}
+      DB_USER: ${DB_USER:-}
+      DB_PASSWORD: ${DB_PASSWORD:-}
+      AUTH_DEMO_ENABLED: ${AUTH_DEMO_ENABLED:-false}
+      AI_RESPONSE_FORMAT: ${AI_RESPONSE_FORMAT:-json_schema}
+      AI_ENABLE_THINKING: ${AI_ENABLE_THINKING:-}

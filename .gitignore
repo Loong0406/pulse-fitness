@@ -1,0 +1,14 @@
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+.env
+.runtime/
+.tools/
+*.keystore
+*.jks
+config/database.local.properties
+config/database-admin.local.properties
+config/ai.local.properties
+deliverables/

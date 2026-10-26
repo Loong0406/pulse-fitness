@@ -1,0 +1,116 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/workout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/canvas"
+    android:orientation="vertical"
+    android:padding="24dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/workout_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="‹"
+            android:textSize="34sp"
+            android:textColor="@color/ink"
+            android:gravity="center"
+            android:contentDescription="返回并保存进度"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true" />
+        <TextView
+            android:id="@+id/workout_heading"
+            style="@style/Body"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+        <TextView
+            android:id="@+id/workout_elapsed"
+            style="@style/Caption"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="00:00" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/workout_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:progressTint="@color/accent"
+        android:progressBackgroundTint="@color/line" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/workout_phase"
+                style="@style/Label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MOVE WITH INTENTION" />
+            <TextView
+                android:id="@+id/workout_name"
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+            <com.pulse.fitness.ui.widget.ExerciseArtView
+                android:id="@+id/workout_art"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_accent"
+                android:contentDescription="训练动作装饰示意，操作请以文字要领为准" />
+            <TextView
+                android:id="@+id/workout_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center"
+                android:textColor="@color/ink"
+                android:textSize="42sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:id="@+id/workout_set"
+                style="@style/Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/workout_cue"
+                style="@style/Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:padding="18dp"
+                android:background="@drawable/bg_card" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/workout_primary"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:text="完成本组" />
+    <Button
+        android:id="@+id/workout_pause"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_chip"
+        android:text="暂停训练" />
+</LinearLayout>

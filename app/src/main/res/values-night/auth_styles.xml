@@ -1,0 +1,7 @@
+<resources>
+    <style
+        name="LoginTheme"
+        parent="BaseLoginTheme">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

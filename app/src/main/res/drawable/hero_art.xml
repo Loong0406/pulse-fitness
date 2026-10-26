@@ -1,0 +1,45 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="190dp"
+    android:height="230dp"
+    android:viewportWidth="190"
+    android:viewportHeight="230">
+    <path
+        android:fillColor="@color/art_backdrop"
+        android:pathData="M185,12A97,97 0,0 0,185 206A97,97 0,0 0,185 12" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@color/outline"
+        android:strokeWidth="1"
+        android:pathData="M52,209L190,209 M75,184L190,184 M96,159L190,159 M117,134L190,134 M138,109L190,109" />
+    <path
+        android:fillColor="@color/art_secondary"
+        android:pathData="M100,68C113,61 127,65 134,78L122,112L103,118L81,92Z" />
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M96,69L113,65L130,74L122,105L94,110L81,90Z" />
+    <path
+        android:fillColor="@color/art_skin"
+        android:pathData="M106,46A14,14 0,1 0,134 46A14,14 0,1 0,106 46 M93,77L84,78L60,110L72,116L100,92Z M125,78L136,75L149,101L170,100L173,111L140,116L127,97Z" />
+    <path
+        android:fillColor="@color/canvas"
+        android:pathData="M107,44C101,19 143,21 137,49L125,40L107,44Z" />
+    <path
+        android:fillColor="@color/art_body"
+        android:pathData="M94,107L122,103L141,145L132,159L112,135L104,129L84,160L62,191L47,184L68,144Z" />
+    <path
+        android:fillColor="@color/art_secondary"
+        android:pathData="M122,105L142,143L132,154L109,125L99,120L95,109Z" />
+    <path
+        android:fillColor="@color/art_skin"
+        android:pathData="M47,183L62,191L54,208L40,207Z M131,154L141,147L161,185L150,192Z" />
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M40,202L55,204L64,216L32,216L32,209Z M149,185L161,182L179,199L148,202Z" />
+    <path
+        android:fillColor="@color/canvas"
+        android:pathData="M43,98L50,98L50,123L43,123Z M57,93L64,93L64,128L57,128Z M50,108L76,108L76,114L50,114Z M76,98L83,98L83,123L76,123Z M159,92L166,92L166,120L159,120Z M174,88L181,88L181,124L174,124Z M166,103L186,103L186,110L166,110Z" />
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M160,35L163,27L166,35L174,38L166,41L163,49L160,41L152,38Z" />
+</vector>

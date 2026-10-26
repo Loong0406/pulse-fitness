@@ -1,0 +1,384 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+        <TextView
+            style="@style/Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOUR BODY, YOUR PACE" />
+        <TextView
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="从了解你开始。" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="档案保存在本机。生成 AI 计划时会发送训练所需资料，昵称和性别不会发往模型。" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="18dp"
+            android:background="@drawable/bg_auth_field"
+            android:gravity="center_vertical"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/profile_account_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_account_guest"
+                    android:textColor="@color/auth_on_surface"
+                    android:textSize="17sp"
+                    android:fontFamily="sans-serif-medium" />
+                <TextView
+                    android:id="@+id/profile_account_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/auth_secondary"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/profile_account_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginStart="12dp"
+                android:paddingHorizontal="14dp"
+                android:background="@drawable/bg_auth_code"
+                android:textColor="@color/auth_action"
+                android:text="@string/auth_account_sign_in"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <TextView
+            style="@style/Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="01  基本信息" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:labelFor="@id/profile_name"
+            android:text="怎么称呼你" />
+        <EditText
+            android:id="@+id/profile_name"
+            style="@style/Input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:hint="你的昵称"
+            android:maxLength="24"
+            android:inputType="textPersonName"
+            android:autofillHints="nickname" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/profile_age"
+                    android:text="年龄 / 岁" />
+                <EditText
+                    android:id="@+id/profile_age"
+                    style="@style/Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:autofillHints="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="性别 / 可不透露" />
+                <Spinner
+                    android:id="@+id/profile_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="10dp"
+                    android:contentDescription="性别" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/profile_height"
+                    android:text="身高 / cm" />
+                <EditText
+                    android:id="@+id/profile_height"
+                    style="@style/Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:autofillHints="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/profile_weight"
+                    android:text="体重 / kg" />
+                <EditText
+                    android:id="@+id/profile_weight"
+                    style="@style/Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:autofillHints="" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            style="@style/Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="02  训练偏好" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="当前目标" />
+        <Spinner
+            android:id="@+id/profile_goal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="10dp"
+            android:contentDescription="训练目标" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="训练经验" />
+        <Spinner
+            android:id="@+id/profile_experience"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="10dp"
+            android:contentDescription="训练经验" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="可用器械" />
+        <Spinner
+            android:id="@+id/profile_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="10dp"
+            android:contentDescription="可用器械" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="每周训练 / 天" />
+        <Spinner
+            android:id="@+id/profile_days"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="10dp"
+            android:contentDescription="每周训练天数" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="每次训练 / 分钟（含热身放松）" />
+        <Spinner
+            android:id="@+id/profile_minutes"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="10dp"
+            android:contentDescription="每次训练分钟数" />
+        <TextView
+            style="@style/Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="03  动作限制" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="以下选项用于避开动作，不用于诊断或康复。如果已有伤病，请先咨询专业人员。" />
+        <CheckBox
+            android:id="@+id/profile_knees"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="避开膝部负荷较大的动作"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/profile_back"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="避开腰背负荷较大的动作"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/profile_low_impact"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="不安排跳跃，偏好低冲击训练"
+            android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/profile_professional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="处于孕产期，或因疾病 / 伤病被建议限制运动"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/profile_error"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error"
+            android:accessibilityLiveRegion="polite" />
+        <Button
+            android:id="@+id/profile_save"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:text="保存档案，开始改变 ↗" />
+        <Button
+            android:id="@+id/profile_undo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_chip"
+            android:text="撤销上次档案修改" />
+        <TextView
+            style="@style/Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="AI 教练服务" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:labelFor="@id/profile_endpoint"
+            android:text="服务地址（模拟器默认已填好，真机改为电脑局域网地址）" />
+        <EditText
+            android:id="@+id/profile_endpoint"
+            style="@style/Input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:hint="http://10.0.2.2:8080"
+            android:inputType="textUri"
+            android:autofillHints="" />
+        <EditText
+            android:id="@+id/profile_token"
+            style="@style/Input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:hint="服务访问令牌（非模型 API Key）"
+            android:inputType="textPassword"
+            android:autofillHints="" />
+        <Button
+            android:id="@+id/profile_connect"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_chip"
+            android:text="保存连接并检测服务" />
+        <TextView
+            android:id="@+id/profile_connection_status"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:accessibilityLiveRegion="polite" />
+        <Button
+            android:id="@+id/profile_delete"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_chip"
+            android:text="清除本机所有个人数据"
+            android:textColor="@color/error" />
+        <TextView
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="脉动 PULSE 1.2 · 适合自己的，才是好计划\n自动计划适用范围：18–69 岁、无医疗运动限制" />
+    </LinearLayout>
+</ScrollView>

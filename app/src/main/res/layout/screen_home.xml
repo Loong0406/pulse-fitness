@@ -1,0 +1,208 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:clipToPadding="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="脉动标志" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="PULSE / 脉动"
+                android:textSize="17sp"
+                android:textColor="@color/ink"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.04" />
+            <TextView
+                android:id="@+id/home_avatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:text="你"
+                android:textColor="@color/ink"
+                android:textSize="17sp"
+                android:contentDescription="编辑个人档案"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/home_date"
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="YOUR EVERYDAY, BETTER" />
+        <TextView
+            android:id="@+id/home_greeting"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="今天，为自己开练。" />
+        <TextView
+            android:id="@+id/home_subtitle"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="一点进步，也值得认真对待。" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_dark">
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="230dp"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/hero_art"
+                android:importantForAccessibility="no" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="24dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/home_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERSONAL TRAINING"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.12"
+                    android:textColor="@color/accent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="让训练\n更懂你。"
+                    android:textColor="@color/ink"
+                    android:textSize="32sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="2dp" />
+                <TextView
+                    android:id="@+id/home_plan_hint"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="从一份专属计划开始"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondary" />
+                <Button
+                    android:id="@+id/home_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:text="开启训练  ↗"
+                    android:textSize="13sp"
+                    android:paddingHorizontal="18dp" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="112dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_accent"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:id="@+id/home_sessions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 次"
+                    android:textColor="@color/ink"
+                    android:textSize="28sp"
+                    android:fontFamily="sans-serif-medium" />
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="本周完成训练"
+                    android:textColor="@color/secondary" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="112dp"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:id="@+id/home_minutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 分钟"
+                    android:textColor="@color/ink"
+                    android:textSize="28sp"
+                    android:fontFamily="sans-serif-medium" />
+                <TextView
+                    style="@style/Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="累计投入的时间" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center_vertical">
+            <TextView
+                style="@style/Section"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="你的训练节奏" />
+            <TextView
+                android:id="@+id/home_all_plan"
+                style="@style/Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="查看计划 ↗" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/home_week"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal" />
+        <TextView
+            android:id="@+id/home_tip"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="先完善档案，再选择适合自己的节奏。" />
+        <TextView
+            style="@style/Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="MOVE AT YOUR OWN PACE" />
+    </LinearLayout>
+</ScrollView>

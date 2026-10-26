@@ -1,0 +1,48 @@
+<resources>
+    <style
+        name="BaseLoginTheme"
+        parent="AppTheme">
+        <item name="android:windowBackground">@color/auth_surface</item>
+        <item name="android:statusBarColor">@color/auth_surface</item>
+        <item name="android:navigationBarColor">@color/auth_surface</item>
+        <item name="android:colorAccent">@color/auth_action</item>
+    </style>
+    <style
+        name="LoginTheme"
+        parent="BaseLoginTheme" />
+    <style
+        name="AuthDialogTheme"
+        parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">@color/auth_action</item>
+        <item name="android:colorBackground">@color/auth_surface</item>
+        <item name="android:colorBackgroundFloating">@color/auth_surface</item>
+        <item name="android:textColorPrimary">@color/auth_on_surface</item>
+        <item name="android:textColorSecondary">@color/auth_secondary</item>
+    </style>
+    <style
+        name="AuthLabel"
+        parent="Body">
+        <item name="android:textColor">@color/auth_on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="AuthInput">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/auth_on_surface</item>
+        <item name="android:textColorHint">@color/auth_secondary</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+    <style name="AuthLink">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/auth_action</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+</resources>

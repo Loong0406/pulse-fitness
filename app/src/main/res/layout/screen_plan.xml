@@ -1,0 +1,115 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUILT AROUND YOU" />
+        <TextView
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="一周，有计划。" />
+        <TextView
+            android:id="@+id/plan_summary"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:padding="20dp"
+            android:background="@drawable/bg_dark"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/plan_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="为你定制训练节奏"
+                android:textColor="@color/accent"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/plan_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="5dp" />
+            <ProgressBar
+                android:id="@+id/plan_loading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="16dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/accent"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/plan_ai"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:text="✦ 生成 AI 专属计划" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/plan_message"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:accessibilityLiveRegion="polite" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/plan_local"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_chip"
+                android:text="使用本地计划"
+                android:textSize="13sp" />
+            <Button
+                android:id="@+id/plan_copy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/bg_chip"
+                android:text="复制到新周期"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <TextView
+            style="@style/Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="本周安排" />
+        <LinearLayout
+            android:id="@+id/plan_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="14dp" />
+        <Button
+            android:id="@+id/plan_export"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_chip"
+            android:text="导出训练计划 ↗" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/auth_legal_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/auth_surface">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp">
+        <ImageButton
+            android:id="@+id/auth_legal_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_auth_back"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/auth_back" />
+        <TextView
+            android:id="@+id/auth_legal_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="19sp"
+            android:textColor="@color/auth_on_surface"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/auth_legal_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:textColor="@color/auth_on_surface"
+            android:textSize="16sp"
+            android:lineSpacingExtra="7dp"
+            android:textIsSelectable="true" />
+    </ScrollView>
+</LinearLayout>

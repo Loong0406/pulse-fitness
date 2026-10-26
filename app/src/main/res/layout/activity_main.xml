@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/canvas">
+    <FrameLayout
+        android:id="@+id/page_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp"
+        android:background="@color/surface">
+        <TextView
+            android:id="@+id/nav_home"
+            style="@style/Nav"
+            android:text="今天"
+            android:drawableTop="@drawable/ic_home" />
+        <TextView
+            android:id="@+id/nav_plan"
+            style="@style/Nav"
+            android:text="计划"
+            android:drawableTop="@drawable/ic_plan" />
+        <TextView
+            android:id="@+id/nav_exercise"
+            style="@style/Nav"
+            android:text="动作"
+            android:drawableTop="@drawable/ic_exercise" />
+        <TextView
+            android:id="@+id/nav_progress"
+            style="@style/Nav"
+            android:text="记录"
+            android:drawableTop="@drawable/ic_progress" />
+        <TextView
+            android:id="@+id/nav_profile"
+            style="@style/Nav"
+            android:text="我的"
+            android:drawableTop="@drawable/ic_person" />
+    </LinearLayout>
+</LinearLayout>
